@@ -46,3 +46,22 @@
 -- ('Aubrey', 'Harris', 21, 'C', 'Physics', 'aubrey.harris@example.com', '2003-09-22', 'A-', 'UK'),
 -- ('Evelyn', 'Johnson', 24, 'B', 'History', 'evelyn.johnson@example.com', '1999-07-07', 'B-', 'Australia'),
 -- ('Logan', 'Wilson', 19, 'A', 'Biology', 'logan.wilson@example.com', '2002-01-24', 'AB+', 'New Zealand');
+
+
+
+-- see all data 
+-- select * from students;
+
+-- see only one COLUMN
+-- select email from students;
+
+-- see multiple column
+-- select email,first_name,age from students;
+
+
+-- hide orginal column name 
+-- select email as "student email" from students;
+
+--  sort by 
+-- select * from students ORDER BY (dob) desc
+
