@@ -14,7 +14,7 @@ SELECT * from person2;
 -- renameAColumn
 -- alter table person2 RENAME column age to user_age;
 
-select * from person2;
+
 
 -- modify column type
 -- alter table person2 Alter column user_name type VARCHAR(50) ;
@@ -23,4 +23,13 @@ select * from person2;
 -- alter table person2 alter column user_age set  not null;
 
 -- remove a constrain
-alter table person2 alter COLUMN user_age drop not null;
+-- alter table person2 alter COLUMN user_age drop not null;
+select * from person2;
+-- set unique constrain
+-- alter Table person2 add constraint unique_person2_user_age UNIQUE(user_age);
+
+-- delete unique constraint
+-- alter table person2  drop constraint unique_person2_user_age;
+
+-- delete all table data
+-- TRUNCATE table person2;
