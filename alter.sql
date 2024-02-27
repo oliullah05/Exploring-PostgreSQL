@@ -24,7 +24,7 @@ SELECT * from person2;
 
 -- remove a constrain
 -- alter table person2 alter COLUMN user_age drop not null;
-select * from person2;
+
 -- set unique constrain
 -- alter Table person2 add constraint unique_person2_user_age UNIQUE(user_age);
 
