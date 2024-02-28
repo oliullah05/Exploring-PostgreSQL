@@ -64,4 +64,10 @@
 
 --  sort by 
 -- select * from students ORDER BY (dob) desc
+SELECT * from students;
+-- find unique country/property
+-- select distinct blood_group from students;
 
+-- filter 
+-- select * from students WHERE (country='USA' or country ='Australia') and age =20
+-- select * from  students WHERE age<>20
