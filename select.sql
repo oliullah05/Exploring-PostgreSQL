@@ -102,7 +102,20 @@
 -- select * from students WHERE not email is null
 
 
-SELECT * from students;
+
 -- null default value
-select COALESCE(email,'default@gmail.com') as "Email",* from students
+-- select COALESCE(email,'default@gmail.com') as "Email",* from students
+
+-- filter
+-- select * from students WHERE country = 'USA' or country ='UK' or country = 'Canada'
+-- select * from students WHERE country IN('USA','Canada')
+-- select * from students WHERE age BETWEEN 19 and 20;
+-- select * from students WHERE dob BETWEEN '2000-01-01' and '2005-01-01'  order by(dob) DESC;
+SELECT * from students;
+-- like 
+-- SELECT * from students WHERE first_name like 'J%'
+-- SELECT * from students WHERE first_name Ilike 'a%'
+
+
+
 
