@@ -111,11 +111,24 @@
 -- select * from students WHERE country IN('USA','Canada')
 -- select * from students WHERE age BETWEEN 19 and 20;
 -- select * from students WHERE dob BETWEEN '2000-01-01' and '2005-01-01'  order by(dob) DESC;
-SELECT * from students;
+
 -- like 
 -- SELECT * from students WHERE first_name like 'J%'
 -- SELECT * from students WHERE first_name Ilike 'a%'
 
+
+-- pagination 
+-- select * from students limit 2 OFFSET 4*1
+
+-- delete  row
+-- delete from students WHERE grade = 'C' and country = 'UK'
+-- delete from students
+
+
+SELECT * from students ;
+
+-- update
+update students set email='default@mail.com' , age=200 WHERE student_id=45
 
 
 
