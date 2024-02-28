@@ -64,7 +64,6 @@
 
 --  sort by 
 -- select * from students ORDER BY (dob) desc
-SELECT * from students;
 -- find unique country/property
 -- select distinct blood_group from students;
 
@@ -94,4 +93,16 @@ SELECT * from students;
 -- select count(*) from students;
 
 -- biggest name 
-select max(length(first_name)) from students;
+-- select max(length(first_name)) from students;
+
+-- filter not this country
+-- select * from students WHERE country <>'USA'
+
+-- filter where email is NULL
+-- select * from students WHERE not email is null
+
+
+SELECT * from students;
+-- null default value
+select COALESCE(email,'default@gmail.com') as "Email",* from students
+
