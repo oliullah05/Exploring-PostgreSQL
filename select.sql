@@ -71,3 +71,27 @@ SELECT * from students;
 -- filter 
 -- select * from students WHERE (country='USA' or country ='Australia') and age =20
 -- select * from  students WHERE age<>20
+
+-- upperCase
+-- select upper(first_name) as first_name_upper_case,* from students
+
+-- concat two field
+-- select concat(first_name,' ',last_name) as fullName from students;
+
+-- see first_name length
+-- select length(first_name) from students
+
+-- see age avararage
+-- select avg(age) from students
+
+-- max aged person
+-- select max(age) from students;
+
+-- sum
+-- select sum(age) from students
+
+-- count row
+-- select count(*) from students;
+
+-- biggest name 
+select max(length(first_name)) from students;
