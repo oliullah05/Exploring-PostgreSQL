@@ -34,7 +34,7 @@ select * from post
 
 
 -- see another table data using REFERENCES
-select *  from post  right join "user"  on post.user_id = "user".id
+select *  from post  full OUTER join "user"  on post.user_id = "user".id
 
 
 
