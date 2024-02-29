@@ -7,7 +7,8 @@ create table "user" (
 CREATE TABLE "post" (
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
-    user_id INT REFERENCES "user"(id) ON DELETE SET DEFAULT DEFAULT 2
+    user_id INT REFERENCES "user"(id)
+    --  ON DELETE SET DEFAULT DEFAULT 2
 );
 insert into "user" (user_name) values 
     ('akash'),
@@ -29,7 +30,29 @@ select * from post
 -- insert into post (title,user_id) values ('test',2)
 
 -- delete
-delete from "user" where id=4;
+-- delete from "user" where id=4;
+
+
+-- see another table data using REFERENCES
+select p.id  from post as p  join "user" as u on p.user_id = u.id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 drop table "user";
 drop table post;
 
