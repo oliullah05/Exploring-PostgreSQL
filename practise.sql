@@ -72,6 +72,12 @@ select * from employees;
 -- select * from employees INNER join "departments" USING(department_id)
 
 -- Show Department Name with Average Salary:
+-- select department_name , round(avg(salary)) as avg_salary,count(*) as count_employees from employees join departments on departments.department_id=employees.department_id GROUP BY department_name order by avg_salary desc limit 1;
 
-select department_name , round(avg(salary)) as avg_salary,count(*) from employees join departments on departments.department_id=employees.department_id GROUP BY department_name order by avg_salary desc;
+
+-- Count Employees Hired Each Year
+select extract(year from hire_date) as hire_year , count(hire_date) as count_employees_hired_each_year from employees GROUP BY hire_year;
+
+
+
 
