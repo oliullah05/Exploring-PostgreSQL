@@ -76,7 +76,46 @@ select * from employees;
 
 
 -- Count Employees Hired Each Year
-select extract(year from hire_date) as hire_year , count(hire_date) as count_employees_hired_each_year from employees GROUP BY hire_year;
+-- select extract(year from hire_date) as hire_year , count(hire_date) as count_employees_hired_each_year from employees GROUP BY hire_year;
+
+
+
+-------------------------------------------------------------------------------
+
+
+CREATE TABLE orders (
+    order_id SERIAL PRIMARY KEY,
+    customer_id INT,
+    order_date DATE,
+    total_amount DECIMAL(10, 2)
+);
+
+
+
+INSERT INTO orders (customer_id, order_date, total_amount) VALUES
+(1, '2022-01-05', 100.50),
+(2, '2020-01-07', 200.75),
+(1, '2022-01-08', 150.25),
+(3, '2020-05-10', 300.00),
+(2, '2022-01-15', 180.50),
+(3, '2022-01-20', 220.25),
+(1, '2022-01-25', 90.00),
+(2, '2022-01-28', 120.75),
+(3, '2021-02-01', 250.50),
+(1, '2022-02-05', 180.25);
+
+
+select * from orders;
+-- select customer_id , count(customer_id) as order_count, sum(total_amount) as total_amount from orders  group by customer_id having count(customer_id)>2;
+
+-- Find the total amount of orders placed each month in the year 2022.
+-- select extract(month from order_date)as month, sum(total_amount)  from orders where extract(year from order_date)=2022 group by month;
+select EXTRACT(YEAR FROM order_date) AS order_year, extract(month from order_date)as month, sum(total_amount) as total_amount  from orders group by month,order_year HAVING   EXTRACT(YEAR FROM order_date) = 2022;
+
+
+
+
+
 
 
 
