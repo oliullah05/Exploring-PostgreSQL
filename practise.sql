@@ -110,7 +110,9 @@ select * from orders;
 
 -- Find the total amount of orders placed each month in the year 2022.
 -- select extract(month from order_date)as month, sum(total_amount)  from orders where extract(year from order_date)=2022 group by month;
-select EXTRACT(YEAR FROM order_date) AS order_year, extract(month from order_date)as month, sum(total_amount) as total_amount  from orders group by month,order_year HAVING   EXTRACT(YEAR FROM order_date) = 2022;
+-- select EXTRACT(YEAR FROM order_date) AS order_year, extract(month from order_date)as month, sum(total_amount) as total_amount  from orders group by month,order_year HAVING   EXTRACT(YEAR FROM order_date) = 2022;
+
+
 
 
 
